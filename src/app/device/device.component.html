@@ -1,0 +1,28 @@
+<h4>Formulaire d'enregistrement</h4>
+<div>
+    <form class="example-form" [formGroup]="deviceForm">
+        <mat-form-field class="example-full-width">
+            <mat-label for="hard">Hardwareld</mat-label>
+            <input matInput placeholder="Hardwareld" formControlName="hard" id="hard" required>
+        </mat-form-field><br>
+        <mat-form-field class="example-full-width">
+            <mat-label for="nom">Name</mat-label>
+            <input matInput placeholder="Name" class="form-control" formControlName="nom" id="nom" required>
+        </mat-form-field><br>
+        <mat-form-field class="example-full-width">
+            <mat-label for="type">Types</mat-label>
+            <input matInput placeholder="Type" class="form-control" formControlName="type" id="type" required>
+        </mat-form-field><br>
+        <mat-form-field appearance="fill">
+            <mat-label for="date">Choose a date</mat-label>
+            <input matInput [matDatepicker]="picker" class="form-control" formControlName="date" id="date" required>
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field><br><br>
+        <button mat-raised-button color="primary" style="margin: 14px 8px;" type="submit" (click)="save()" >Register</button>
+        <button mat-raised-button color="accent" (click)="resetForm()">CAncel</button>
+    </form>
+</div>
+
+

@@ -1,0 +1,13 @@
+<div class="" id="place">
+    <div class="child">
+        <p>J'ai déja : {{age}}</p>
+    </div>
+
+    <div class="form">
+        <mat-form-field class="example-full-width">
+            <mat-label for="hard">Write data....</mat-label>
+            <input matInput placeholder="data....." #newData>
+        </mat-form-field> <br>
+        <button mat-raised-button color="primary" (click)="addNewList(newData.value)">Save to List</button>
+    </div>
+</div>

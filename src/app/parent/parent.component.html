@@ -1,0 +1,19 @@
+<div class="parent">
+    <h2>Composant parent</h2>
+    <div class="child">
+        <app-enfant 
+         [age]="sendData"
+         (newAddEvent)="AddList($event)">
+        </app-enfant>
+    </div>
+     <div style="text-align: center;"> <ul>
+        <ol *ngFor="let item of items">{{item}}</ol>
+    </ul>
+     </div>
+   
+</div>
+
+
+
+
+

@@ -1,0 +1,43 @@
+
+<h4>List of Devices</h4>
+<div>
+    <table mat-table [dataSource]="devicearr" class="mat-elevation-z8" id="table">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+        <!-- Position Column -->
+        <ng-container matColumnDef="Hardwareld">
+          <th mat-header-cell *matHeaderCellDef> Hardwareld </th>
+          <td mat-cell *matCellDef="let devicearr"> {{devicearr.hard}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="Name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let devicearr"> {{devicearr.nom}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="Types">
+          <th mat-header-cell *matHeaderCellDef>  Types </th>
+          <td mat-cell *matCellDef="let devicearr"> {{devicearr.type}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="CreateDate">
+          <th mat-header-cell *matHeaderCellDef> CreateDate </th>
+          <td mat-cell *matCellDef="let devicearr"> {{devicearr.date}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row  *matRowDef="let row; columns: displayedColumns;
+        let i = index" (click)= rowSelected(i) [ngClass]="{'highlight': i === selectedItemIdx}"
+        ></tr>
+      </table>
+      
+       <br>
+      <div style="text-align: center;">
+        <button mat-raised-button color="" style="margin: 14px 8px; background-color: tomato;" (click)="deleteSelected()" [disabled]="state">Delete</button>
+        <button mat-raised-button color="primary" routerLink="/device">Add</button>
+      </div>
+</div>

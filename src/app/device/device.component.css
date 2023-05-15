@@ -1,0 +1,17 @@
+h4 {
+    text-align: center;
+}
+
+example-form {
+    min-width: 100px;
+    max-width: 200px;
+    width: 20%;
+}
+
+.example-full-width {
+    width: 20%;
+}
+
+div {
+    text-align: center;
+}
